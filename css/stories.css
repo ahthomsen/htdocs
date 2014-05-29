@@ -1,0 +1,143 @@
+.front-box {
+	height: 65px;
+	margin-bottom: 20px;
+	background-repeat: no-repeat;
+	background:url(../img/park.jpg);
+}
+
+
+.stories-container h1, 
+.stories-container-profile h1 {
+	font-size: 1em;
+	position: absolute;
+	bottom: 60px;
+	z-index: 100;
+	left: 6%;
+	color: white;
+}
+
+.stories-container h2,
+.stories-container-profile h2 {
+	font-size: 1em;
+	position: absolute;
+	bottom: 30px;
+	left: 6%;
+	z-index: 100;
+	color: white;
+}
+
+.random_button_show a {
+	
+	margin-top: 20px;
+	text-decoration: none;
+	color: white;
+}
+
+
+.stories-container h3,
+.stories-container-profile h3 {
+	position: relative;
+	font-size: 0.6em;
+	margin: 0 auto;
+
+}
+ 
+.stories-container p,
+.stories-container-profile p {
+	position: absolute;
+	right: 5%;
+	top: 5%;
+	width: 35px;
+	height: 35px;
+	margin: 0;
+	padding: 5px 3px 5px 1px;
+	text-align: center;
+	background: #FF9400;
+	border-radius: 100%;
+	color: white;
+	text-decoration: bold;
+	font-size: 1.2em;	
+}
+
+.stories-container img, 
+.stories-container-profile img {
+	width: 95%;
+	border: 2px solid black;
+	padding: 1%;
+	margin-top: 10px;
+	
+}
+
+.stories-top-header h1 {
+	font-size: 1em;
+	color: black;
+	margin: 5px auto;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+	
+}
+
+
+
+@media (min-width: 768px)  {
+	
+	.stories-top-header {
+		width: 97%;
+		margin: 0 auto;
+	}
+	
+	
+	.all-post-cards-container-ul li:last-child {
+		margin-bottom: 200px;
+	}
+	
+	
+
+	
+	
+
+}
+
+.postcard-like-action img {
+	height: 22px;
+	width: 22px;
+	border: 2px solid #FF9400;
+	position: absolute;
+	right: 10px;
+	bottom: 2px;
+	
+	
+}
+
+.random_button_show, .upload_stories_show {
+	border: 3px solid white;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	right: 0px;
+	top: 50%;
+	z-index: 1000000;
+	background: orange;
+	font-size: 1.2em;
+	border-radius: 20% 0 0 20%;
+	text-decoration: none;
+	color: white;
+	padding: 12px 0 0 5px;
+}
+.upload_stories_show {
+	top:33%;
+	height: 65px;
+	padding: 8px 0 0 5px;
+}
+.upload_stories_show a {
+	text-decoration: none;
+	color: white;
+	padding: 12px 0 0 5px;
+	
+}
+

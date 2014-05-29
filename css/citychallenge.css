@@ -1,0 +1,243 @@
+.challenge-containter {
+
+
+}
+
+.challenge-city-rows {
+	width: 98%;
+	margin: 5px auto;
+	position: relative;
+	width: 95%;
+	height: 100%;
+	border: 2px solid white;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+}
+
+.challenge-header {
+	width: 90.5%;
+	margin: 5px auto;
+	position: relative;
+	height: 100%;
+	border: 2px solid white;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	font-size: 1.5em;
+}
+
+
+.challenge-header img {
+	height: 30px;
+	width:  30px;
+	margin: 5px;
+	float: right;
+}
+
+.challenge-header div {
+	margin-right: 1%;
+	width: 100%;
+}
+
+
+.challenge-city-name  {
+	text-align: center;
+	position: relative;
+	margin: 10px auto;
+	padding-top: 1px;
+	width: 98%
+}
+
+.challenge-city-name h2 {
+	margin: 15px auto 5px auto;
+	text-align: center;
+	padding: 5px 5px; 
+	background-color:white;
+	filter:alpha(opacity=30); 
+	opacity:.8;
+	border-radius: 10px;
+	width: 80%;
+	border: 5px solid #FF9400;
+}
+.challenge-city-scores img {
+	height: 30px;
+	width: 30px;
+	margin-right: 15px;
+	margin-top: 5px;
+	margin-bottom: -5px;
+}
+
+.challenge-city-scores {
+	margin: 30px auto 10px auto;
+	text-align: center;
+	width: 80%;
+	background: white;
+}
+
+.challenge-city-scores {
+	margin: 15px auto 5px auto;
+	text-align: center;
+	padding: 5px 5px; 
+	background-color:white;
+	filter:alpha(opacity=60); 
+	opacity:.8;
+	border-radius: 10px;
+	width: 80%;	
+	border: 5px solid #FF9400;
+	
+}
+
+.challenge-check {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	bottom: 30%;
+	right: 45%;
+	color: green;
+	border: 2px solid #FF9400;
+}
+
+.challenge-city-scores h3 {
+ width:39%;
+ display:inline-block;
+ font-size: 1.2em;
+
+}
+
+
+.challenge-city-scores h3 p {
+display: inline;
+background: #FF9400;
+padding: 10px 15px;
+ border-radius: 100%;
+}
+
+.challenge-white-space {
+	height: 20px;
+}
+
+.city-submit-button {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	padding: 5px 10px;
+	background: #FF9400;
+	color: white;
+	font-size: 1em;
+	border: 2px solid white;
+	border-radius: 100%;
+	box-shadow: 0px 0px 10px white;
+	margin-top: 10px;
+	
+}
+
+/*    Challenge result */
+
+.result-container  {
+	width: 98%;
+	margin: 15px auto;
+	position: relative;
+	height: 100%;
+	border: 2px solid white;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+}
+
+.result-container-small  {
+	width: 98%;
+	margin: 5px auto;
+	position: relative;
+	height: 100%;
+	border: 2px solid white;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+}
+
+.result-container-small h3  {
+	font-size: 0.8em;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+.result-title h1 {
+	width: 80%;
+	margin: 5px auto;
+	position: relative;
+	height: 100%;
+	border: 2px solid white;
+	background: #FF9400;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	font-family: 'Crafty Girls', cursive;
+	font-size: 1.5em; 
+	padding: 10px;
+}
+.result-title h2 {
+	font-size: 0.9em;
+} 
+
+.result-share {
+	margin: 5px auto 5px auto;
+	text-align: center;
+	padding: 5px 5px; 
+	background-color:lightgrey;
+	filter:alpha(opacity=30); 
+	opacity:.8;
+	border-radius: 10px;
+	width: 80%;
+}
+
+.result-share h3 {
+	float: left;
+	height: 10px;
+	padding: 2px;
+	margin: 0;
+}
+
+.fb-send {
+	margin: 2px 5px 0 0;
+	float: right;
+}
+
+.result-kokomo-features {
+	width: 98%;
+	margin: 15px auto;
+	position: relative;
+	height: 100%;
+	border: 2px solid white;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+}
+
+.result-kokomo-features h3 {
+	padding: 5px;
+	font-size: 0.9em;
+	
+}
+
+.result-kokomo-features img {
+	width: 98%;
+}
+
+
+@media (min-width: 768px)  {
+	.challenge-containter {
+		width:40%;
+		display: inline;
+	}
+	.challenge-city-rows {
+		width: 45%;
+		display: inline-block;
+		
+	}
+	
+	.result-kokomo-features {
+	width: 49%;
+	display:inline-block;
+	}
+}

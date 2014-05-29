@@ -1,0 +1,1141 @@
+
+/* Page Styles
+================================ */
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,
+body {
+ height: 100%;
+ width: 100%;
+ margin-bottom: 150px;
+}
+body {
+	font: normal 0.9em/1.3 Helvetica;
+	color: #222;
+	background-color: #edeff0;
+	padding-top: 120px; /*Pushes text down*/
+	width: 100%;
+}
+
+	body {
+	  background: url(../img/bg7.jpg) no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+		
+	}
+	
+/*  COde used to hide error boxes */
+
+.error-box-hide {
+	display: none;
+	position: relative;
+}
+
+/* CLEAR FIX to stop floats*/
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+html[xmlns] .clearfix {
+   display: block;
+}
+
+* html .clearfix {
+   height: 1%;
+}
+
+.top {
+	z-index: 100000000000;
+}
+
+/* Stop showing the DIVs marked as mobile hidden*/
+
+.mobile-hidden {
+	display:none;
+}
+
+/* Layout Element Colors
+================================ */
+
+.main-header       { background-color: #E5F2FF; }
+.main-logo a       { background-color: #FF9400; }
+.main-nav a        { background-color: #009ECE; }
+.primary-content   { background-color: #caebf6; }
+.secondary-content { background-color: #bfe3d0; }
+.main-footer       { background-color: #E5F2FF; }
+
+/* Header, Banner and Footer Layout
+================================ */
+    /* Header */
+ 
+.main-header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 100;
+	padding: 15px;
+	height: 115px;
+	border-bottom: 5px solid #009ECE;
+	box-shadow: 0px 0px 5px black;
+}
+
+.main-nav li {
+	display:inline-block;
+	margin: 5px 2px 5px 2px;
+}
+
+.nav-search-li {
+width:65%;
+float: left;
+}
+
+.nav-login-li {
+width:15.5%;
+float: right;
+}
+
+.nav-menu-li {
+width:15.5%;
+margin-right: 0;
+float: right;
+}
+
+.header-search-bar {
+	border: 1px solid #009ECE;
+	width: 83%;
+	height: 28px;
+	padding: 0;
+	
+}
+
+.header-search-submit {
+	border: 1px solid #009ECE;
+	width: 28px;
+	height: 28px;
+	margin: 0;
+	padding: 0;
+	background: url(/img/search2.gif) no-repeat #E5F2FF;	
+	background-size: 100%;
+}
+
+
+.main-nav a:hover {
+	background-color: orange;
+	border-radius: 30%;
+}
+
+.main-logo a, 
+.main-nav a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: 5px 5px;
+	border-radius: 5px;
+	transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	-moz-ransition-duration: 1s;
+	-o-transition-duration: 1s;
+}
+
+.logged-in-me {
+ background: #FF9400;
+	
+}
+
+.main-logo a {
+font-family: 'Crafty Girls', cursive;
+font-size: 1.5em; 
+padding: 0;
+}
+
+.main-nav a {
+	box-shadow: 0px 0px 5px white;
+}
+
+/* CENTER BOXES
+================================ */
+
+.content-row {
+	float: none;
+	text-align:center;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 150px;
+	position: relative;
+	margin-bottom: 150px;
+}
+
+.front-box {
+	margin: 5px auto;
+	position: relative;
+	width: 95%;
+	height: 150px;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+}
+
+/*   testing colorless pictures */
+
+.footer-social-networks  img {
+    filter: url(css/filters.svg#grayscale); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+}
+
+.footer-social-networks  img:hover {
+    filter: none;
+    -webkit-filter: none;
+}
+
+/**************/
+
+.front-box a {
+	padding: 10px;
+	font-family: Helvetica;
+	font-size: 1.3em;
+	color: #202020;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+	display: block;
+	
+}
+
+.front-box p {
+	position:absolute;
+	bottom: 0;
+	padding: 5px 0px 5px 0px;
+	font-family: Helvetica;
+	font-size: 0.8em;
+	color: black;
+	text-decoration: none;
+	width: 100%;
+	background-color: white;
+	margin: 0;
+	border-radius: 0 0 5px 5px;
+}
+
+
+
+.box-text {
+	width: 100%;
+	margin: 0 auto;
+	background: rgba(0,0,0,0.4);
+	width: 100%;
+	text-align: left;
+	border-radius: 5px 5px 0 0;
+}
+
+.content-area1 {
+	background-repeat: no-repeat;
+	background:url(../img/new_city11.jpeg);
+}
+
+.content-area2 {
+	background-repeat: no-repeat;
+	background:url(../img/new_concert11.jpeg);
+}
+
+.content-area3 {
+	background-repeat: no-repeat;
+	background:url(../img/new_mountain11.jpeg);
+}
+
+.content-area4 {
+	background-repeat: no-repeat;
+	background:url(../img/new_couple11.jpeg);
+}
+
+
+
+/* Footer display - mobile */
+
+.main-footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	height: 45px;
+	z-index: 100;	
+	border-top: 5px solid #009ECE;
+	box-shadow: 0px 0px 5px black;
+	}
+	
+.footer-stories {
+	font-size: 1em;
+	text-align: left;
+	padding: 0 0 0 0;
+	margin: 0;
+	border: 0;
+	
+}
+
+.footer-get-inspired {
+	font-size: 0.8em;
+	text-align: left;
+	padding: 0 0 0 0;
+	font-family: Helvetica, Arial;
+	margin: 0;
+}
+
+.footer-story-text {
+	font-size: 1em;
+	color: #282828;
+	text-align: left;
+	padding: 0;
+	font-family: Helvetica, Arial;
+	margin: 0;
+	line-height: 90%;
+}
+
+
+.story-picture {
+	float: left;
+	display:inline-block;
+	padding: 0;
+	border-right: 5px solid white;
+	margin: 0;
+	height: 44px;
+	width: 40px;
+}
+
+.dest-border-actions a {
+	color: white;
+	text-decoration: none;
+	
+	
+}
+
+
+/* Stories related css */
+
+.stories-container {
+	margin: 5px auto;
+	position: relative;
+	width: 95%;
+	height: 100%;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+}
+.stories-container h1 {
+	font-size: 1em;
+	position: absolute;
+	bottom: 60px;
+	z-index: 100;
+	left: 6%;
+	color: white;
+}
+
+.stories-container h2 {
+	font-size: 1em;
+	position: absolute;
+	bottom: 30px;
+	left: 6%;
+	z-index: 100;
+	color: white;
+}
+
+.stories-container h3 {
+	position: relative;
+	font-size: 0.6em;
+	margin: 0 auto;
+
+}
+ 
+.stories-container p {
+	position: absolute;
+	right: 5%;
+	top: 5%;
+	width: 35px;
+	height: 35px;
+	margin: 0;
+	padding: 5px 3px 5px 1px;
+	text-align: center;
+	background: #FF9400;
+	border-radius: 100%;
+	color: white;
+	text-decoration: bold;
+	font-size: 1.2em;	
+}
+
+.stories-container img {
+	width: 95%;
+	border: 2px solid black;
+	padding: 1%;
+	margin-top: 10px;
+	
+}
+
+
+
+
+/* Float Clearfix
+================================ */
+
+.group:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/* Media Queries
+================================ */
+
+
+/* Button on the left part of the screen
+================================ */
+
+
+.dest-border-actions {
+	position: fixed;
+	width: 23.75%;
+	bottom: 0;
+	height: 40px;
+	background:#FF9400;
+	color: white;
+	border: 2px solid white;
+	border-bottom: 0;
+	padding: 5px;
+	border-radius: 20% 20% 0 0;
+	text-align: center;	
+	box-shadow: 0px 0px 3px black;
+    transition-duration: 1s;
+	-webkit-transition-duration: 1s;
+	-moz-ransition-duration: 1s;
+	-o-transition-duration: 1s;
+	font-size: 0.9em;
+}
+
+.stories-container p, 
+.stories-container h1, 
+.stories-container a,
+.stories-container h2, 
+.stories-container h3 a{
+	color: black;
+	text-decoration: none;
+}
+
+.comment {
+	right: 1%;
+}
+
+.postcard {
+	right: 25.75%;
+}
+
+
+.save {
+	right: 50.5%;
+}
+
+.beenthere {
+	right: 75.25%;
+}
+
+/* Consolidated CSS styles */
+
+.content-container-narrow {
+	margin: 10px auto;
+	position: relative;
+	width: 95%;
+	height: 100%;
+	border: 5px solid white;
+	border-radius: 10px;
+	background: white;
+	box-shadow: 0px 0px 3px black;	
+}
+
+.content-contrainer-narrow-blank {
+	margin: 10px auto;
+	position: relative;
+	width: 95%;
+	height: 100%;
+}
+
+.content-container-narrow ul li h2 {
+	float: left;
+	width: 70%;
+	font-size: 0.8em;
+	display: inline-block;
+	text-align: left;
+	margin: 5px 10px 0 5px;
+	height: 30px;
+}
+
+.content-container-narrow ul li p {
+	float: right;
+	width: 25px;
+	height: 25px;
+	display: block;
+	text-align: right;
+	margin: 5px 10px;
+	background: #009ECE;;
+	border-radius: 100%;
+	padding: 5px 3px 0 0;
+	font-size: 0.8em;
+	color: white;
+}
+
+.anchor-middle-orange {
+	font-size: 0.8em;
+	color:#FF9400; 
+	text-decoration: none;
+	margin: 0px;
+}
+.anchor-middle-orange h2 {
+	font-size: 0.8em;
+	color:#FF9400; 
+	text-decoration: none;
+	margin: 0px;
+}
+
+
+
+/* end
+================================ */
+
+.postcard-like-action img {
+	height: 22px;
+	width: 22px;
+	border: 2px solid #FF9400;
+	position: absolute;
+	right: 10px;
+	bottom: 2px;	
+}
+
+
+@media (min-width: 768px)  {
+	
+	.content-container-narrow, 
+	.content-contrainer-narrow-blank {
+	width: 500px;
+}
+
+		
+	.dest-border-actions {
+		position: fixed;
+		left: 0;
+		right: inherit;
+		bottom: inherit;
+		height: 60px;
+		width: 60px;
+		background: #FF9400;
+		color: white;
+		border: 2px solid white;
+		border-left: 0;
+		padding: 5px;
+		border-radius: 0 20% 20% 0;
+		text-align: center;	
+		padding-left: 1px;
+	}
+	
+	.comment {
+		top: 200px;
+	}
+	
+	.postcard {
+		top: 265px;
+	}
+	
+	
+	.save {
+		top: 330px;
+	}
+	
+	.beenthere {
+		top: 395px;
+	}
+	
+	.feedback-botton {
+		top: 460px;
+	}
+	
+		/* Stop showing the DIVs marked as mobile hidden*/
+	.mobile-hidden {
+		display:inherit;
+	}
+
+	/****HEADER*****/
+	
+	.header-container {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	}
+	
+	.main-logo {
+	width: 300px;
+	display: inline-block;
+	}
+	.main-nav {
+	display:inline-block;
+	float: right;
+	width: 300px;
+	}
+	
+	.main-header {
+	height: 80px;
+	}
+	
+	/* Feedback botton */
+	
+	.feedback-botton {
+		position: fixed;
+		left: 0;
+		top: 50%;
+		background:#009ECE;
+		padding: 10px 5px 10px 10px;
+		border-radius: 0 20% 20% 0;
+		text-align: center;	
+		box-shadow: 0px 0px 3px black;
+	    transition-duration: 1s;
+		-webkit-transition-duration: 1s;
+		-moz-ransition-duration: 1s;
+		-o-transition-duration: 1s;
+	}
+	
+	.feedback-botton:hover {
+		background:rgba(255,255,255,0.5);
+		
+	}
+	.feedback-botton a {
+		text-decoration: none;
+		color: white;
+		font-size: 0.8em;
+		font-weight: bold;
+		
+		
+	}
+	
+	
+	/* Footer */
+	
+/***** Footer tablet view*****/
+	
+	.footer-social-networks {
+		float: right;
+		width: 300px;
+		position: absolute;
+		bottom: 18px;
+		right: 5px;
+		text-align: right;
+	}
+	
+	.footer-social-networks li {
+		display:inline-block;
+		font-size: 0.3em;		
+	}
+	.footer-stories {
+		position:relative;
+		float: left;
+		width: 300px;
+	}
+	
+	.fb-footer-container {
+		float: right;
+		width: 100px;
+		display: inline-block;
+		position: absolute;
+		right: 270px;
+		z-index: 100000;
+		bottom: 15px;
+	}
+	
+	.footer-social-networks img {
+		height: 40px;
+		weight: 40px;
+		margin-right: 5px;
+		border: 5px solid white;
+	}
+	
+	.main-footer {
+		height: 70px;
+	}
+	
+	.footer-last-line {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		padding: 0;
+		margin: 0 auto;
+		border: 0;
+		background-color: #009ECE;
+		height:21px;
+		text-align: center;
+		color: white;
+	}
+	
+	.footer-last-line a,
+	.footer-last-line p {
+		font-size: 0.6em;
+		text-decoration:none;
+		color: white;
+	}
+	.footer-last-line li {
+		display: inline-block;
+		
+	}
+	
+
+
+	/* Main boxes
+	================================ */
+	
+	.front-box {
+	width: 46.5%;
+	margin: 5px 1%;
+	display: inline-block;
+	
+		
+	}
+
+	.content-area2 {
+		float: right;
+	}
+	
+	.content-area3 {
+	}
+	
+	.content-area4 {
+		float: right;
+	}
+	
+	
+		/* Stories 
+	================================ */
+	.stories-top-header {
+		width: 95%;
+	}
+	
+
+	.all-post-cards-container-ul li:nth-child(odd) {
+		float: left;
+		margin-left: 1%;
+		
+	}
+	.all-post-cards-container-ul li:nth-child(even) {
+		float: right;
+		margin-right: 1%;
+	}
+	
+	.all-post-cards-container-ul li {
+		display: inline-block;
+		width: 49%;
+	}
+	
+
+} 
+
+/******* END of Tablet setup*****/
+
+@media (min-width: 850px)  {
+
+	.content-row {
+		width: 800px;
+		margin: 0 auto;
+	}
+		
+
+	.footer-stories {
+		width: 650px;	
+	}
+	
+	
+}
+
+/*the following is formatting the drop down menu */
+
+.nav-menu-li ul {
+	display: none;
+}
+
+.nav-menu-li:hover > ul {
+		display: block;
+		
+	}
+
+.nav-dropdown {
+	background: #E5F2FF;
+	width: 200px;
+	position: absolute;
+	right:-15px;
+	border: 5px solid #009ECE;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px black;
+}
+.nav-dropdown li {
+	width: 190px;
+	padding: 1px 5px;
+	margin: 1px;
+	
+}
+
+
+
+/* USER CSS*/
+
+
+.register-div, 
+.edit-user-div {
+	margin: 20px auto 15px auto;
+	padding: 15px 20px;
+	position: relative;
+	width: 95%;
+	height: 160px;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+}
+
+.register-div p {
+	display: block;
+	width: 100%;
+	clear: both;
+}
+
+.register-fields {
+	width: 50%;
+	height: 25px;
+	border: 2px solid #009ECE;
+	padding: 3px 5px;
+	float: right; 
+	font-size: 0.8em;
+	margin: 5px;
+}
+
+.upload-error-box p {
+	margin: 10px;
+	position: relative;
+	margin-top: 30px;
+	border-radius: 30%;
+	padding: 10px;
+	background: #009ECE;
+	color: white;
+	font-weight: strong;
+}
+
+
+.register-text {
+	width: 40%;
+	border: 0;
+	height: 25px;
+	padding: 3px 5px; 
+	float: left;
+	font-size: 0.8em;
+	margin: 5px;
+	text-align: left;
+}
+
+.register-button {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	padding: 5px 10px;
+	background: #FF9400;
+	color: white;
+	font-size: 1em;
+	border: 2px solid white;
+	border-radius: 100%;
+	box-shadow: 0px 0px 10px white;
+}
+
+.not-for-humans {
+	display: none;
+}
+
+.register-button-div {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.register-error {
+	background: red;
+	color: white;
+}
+
+/* user page CSS */
+.user-content-bow {
+	margin: 20px auto 15px auto;
+	padding: 15px 20px;
+	position: relative;
+	width: 95%;
+	height: 100%;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+}
+
+.user-pic-div h1 {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.user-pic-div img {
+	width: 90%;
+	border: 5px solid black;
+}
+
+.user-pic-div h2 {
+	position: absolute;
+	top: 45px;
+	right: 12%;
+	font-size: 1.2em;
+	background: #FF9400;
+	border: 2px solid white;
+	border-radius: 10%;
+	box-shadow: 0px 0px 10px white;
+	padding: 5px;
+	color: white;
+}
+
+
+.user-stats-div {
+	width: 90%;
+	margin: 10px auto 5px auto;	
+}
+
+.user-stats-div h2 {
+	text-align: left;
+	float: left;
+	font-size: 1.1em;
+	width: 85%;
+	margin-left: 0;
+	margin-right: 2.5%;
+	margin-top: 0px;
+	
+}
+
+.user-stats-div p {
+	float: right;
+	font-size: 1.1em;
+	width: 30px;
+	height: 30px;
+	color: white;
+	background: #009ECE; 
+	border-radius: 100%;
+	padding: 5px 5px;	
+	margin: 0px 0px 1px 1px;
+}
+
+.user-basic-info-div  {
+   width: 90%;
+   margin: 20px auto 0px auto;
+}
+
+.user-basic-info-div p  {
+
+   color: darkgrey;
+   font-size: 1em;
+}
+
+.leftalign {
+	float: left;
+	width: 55%;
+	margin: 0;
+	padding: 2px 0px;
+	text-align: left;
+}
+.rightalign {
+	float: right;
+	width: 40%;
+	margin: 0;
+	padding: 2px 0;
+	text-align: right;
+}
+
+.user-checkout-div {
+	margin: 20px auto 15px auto;
+	padding: 5px 5px;
+	position: relative;
+	width: 95%;
+	height: 100%;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+}
+	
+.user-checkout-div h1 {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.user-check-out-list img {
+	width: 10%;
+	float: left;
+	border: 2px solid black;
+	margin: 0 0 0 2.5%;
+}
+
+.user-check-out-list h3 {
+	width: 85%;
+	float: right;
+	font-size: 0.2em:
+	padding: 2px 0px;
+	margin: 0px;
+	text-align: left;
+}
+
+.user-postcards-div, 
+.user-postcards-header {
+	margin: 20px auto 15px auto;
+	padding: 5px 5px;
+	position: relative;
+	width: 95%;
+	height:  20px;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+}
+.user-postcards-header {
+	height: 30px;
+}
+.user-postcards-header h1 {
+font-size: 1.2em;
+}
+
+
+.login-text-box {
+	margin: 20px auto 15px auto;
+	padding: 5px 5px;
+	position: relative;
+	width: 95%;
+	height:  160px;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+	
+}
+
+.login-text-box p {
+	display: block;
+	width: 100%;
+	margin: 0px auto;
+	padding-top: 10px;
+	clear: both;
+	
+}
+
+.login-text-box h1 {
+	font-size: 0.8em;
+	
+}
+
+.stories-upload-header {
+	font-size: 1.2em;
+	
+}
+
+/* *** Media setup of user profile */
+
+
+@media (min-width: 768px)  {
+
+	.register-button {
+		width: 50px;
+	}
+	
+	.register-div,
+	.edit-user-div {
+	width: 400px;
+	}
+	
+	.user-pic-div {
+		display: inline-block;
+		width: 45%;
+		float: left;
+		position: relative;
+	}
+	.travel-status {
+		margin-top: 0px;
+		margin-right: -10px;
+		
+	}
+	
+	.user-stats-div {
+		width: 55%;
+		float: right;
+		display: inline-block;
+		margin-top: 30px;
+	}
+	
+	.user-basic-info-div {
+		width: 55%;
+		float: right;
+		display: inline-block;
+		margin-top: 30px;
+		
+	}
+	.user-postcards-wrapper {
+		float: right;
+		width: 48%;
+		margin-right: 1.5%;
+	}
+	
+	.user-checkout-div {
+		float: left;
+		width: 48%;
+		margin-left: 2.5%;
+	}
+	.login-text-box {
+		width: 400px;
+	}
+	.story-upload-container {
+		width: 400px;
+		
+	}
+
+}
+
+.edit-user-div {
+	height: 100%;
+	
+}
+
+.edit-user-button {
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	padding: 5px 5px;
+	background: #FF9400;
+	color: white;
+	font-size: 0.8em;
+	border: 2px solid white;
+	border-radius: 100%;
+	box-shadow: 0px 0px 10px white;	
+}
+
+.edit-user-div h1 {
+	font-size: 0.9em;
+	
+}
+
+
+
+
+
+
+
+
+
+

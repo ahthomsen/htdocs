@@ -1,0 +1,428 @@
+/* USER CSS*/
+
+.register-button {
+position: relative;
+display: block;
+margin: 0 auto;
+}
+
+.comment-content-field,
+.comment-header-field {
+	width: 95%;
+	height: 25px;
+	border: 2px solid #009ECE;
+	padding: 3px 5px;
+	display: block; 
+	font-size: 0.8em;
+	margin: 5px;
+}
+.comment-content-field {
+	
+	height: 70px;
+}
+
+.comment-container-div {
+	margin: 20px auto 15px auto;
+	padding: 15px 20px;
+	position: relative;
+	width: 95%;
+	height: 100%;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+	
+}
+
+.comment-header-text,
+.comment-content-text {
+	width: 95%;
+	border: 0;
+	display: block;
+	height: 25px;
+	padding: 3px 5px; 
+	float: left;
+	font-size: 0.8em;
+	margin: 5px;
+	text-align: left;
+}
+
+
+
+
+.comment-container-div h1 {
+	font-size: 1em;
+	
+}
+
+.register-div {
+	margin: 20px auto 15px auto;
+	padding: 15px 20px;
+	position: relative;
+	width: 95%;
+	height: 160px;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+}
+
+.register-div p {
+	display: block;
+	width: 100%;
+	clear: both;
+}
+
+.register-fields {
+	width: 50%;
+	height: 25px;
+	border: 2px solid #009ECE;
+	padding: 3px 5px;
+	float: right; 
+	font-size: 0.8em;
+	margin: 5px;
+}
+
+.upload-error-box p {
+	margin: 10px;
+	position: relative;
+	margin-top: 30px;
+	border-radius: 30%;
+	padding: 10px;
+	background: #009ECE;
+	color: white;
+	font-weight: strong;
+}
+
+.user-edit-info a {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	padding: 5px 10px;
+	background: #FF9400;
+	color: white;
+	font-size: 1em;
+	border: 2px solid white;
+	border-radius: 100%;
+	box-shadow: 0px 0px 10px white;
+}
+
+.register-text {
+	width: 40%;
+	border: 0;
+	height: 25px;
+	padding: 3px 5px; 
+	float: left;
+	font-size: 0.8em;
+	margin: 5px;
+	text-align: left;
+}
+
+.register-button {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	padding: 5px 10px;
+	background: #FF9400;
+	color: white;
+	font-size: 1em;
+	border: 2px solid white;
+	border-radius: 100%;
+	box-shadow: 0px 0px 10px white;
+}
+
+.not-for-humans {
+	display: none;
+}
+
+.register-button-div {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.register-error {
+	background: red;
+	color: white;
+}
+
+/* user page CSS */
+.user-content-bow {
+	margin: 20px auto 15px auto;
+	padding: 15px 20px;
+	position: relative;
+	width: 95%;
+	height: 100%;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+}
+
+.user-pic-div h1 {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.user-pic-div img {
+	width: 90%;
+	border: 5px solid black;
+}
+
+.user-pic-div h2 {
+	position: absolute;
+	top: 45px;
+	right: 12%;
+	font-size: 1.2em;
+	background: #FF9400;
+	border: 2px solid white;
+	border-radius: 10%;
+	box-shadow: 0px 0px 10px white;
+	padding: 5px;
+	color: white;
+}
+
+.user-edit-info {
+	
+	text-decoration: none; 
+	color: #FF9400;
+	font-size: 0.8em;
+	
+}
+
+.user-add-postcard {
+	color: white;
+	font-size: 0.8em;
+	background: #FF9400;
+	padding: 5px;
+	border-radius: 10px;
+	text-decoration: none;
+	
+}
+
+.user-stats-div {
+	width: 90%;
+	margin: 10px auto 5px auto;	
+}
+
+.user-stats-div h2 {
+	text-align: left;
+	float: left;
+	font-size: 1.1em;
+	width: 85%;
+	margin-left: 0;
+	margin-right: 2.5%;
+	margin-top: 0px;
+	
+}
+
+.user-stats-div p {
+	float: right;
+	font-size: 1.1em;
+	width: 30px;
+	height: 30px;
+	color: white;
+	background: #009ECE; 
+	border-radius: 100%;
+	padding: 5px 5px;	
+	margin: 0px 0px 1px 1px;
+}
+
+.user-basic-info-div  {
+   width: 90%;
+   margin: 20px auto 0px auto;
+}
+
+.user-basic-info-div p  {
+
+   color: darkgrey;
+   font-size: 1em;
+}
+
+.leftalign {
+	float: left;
+	width: 55%;
+	margin: 0;
+	padding: 2px 0px;
+	text-align: left;
+}
+.rightalign {
+	float: right;
+	width: 40%;
+	margin: 0;
+	padding: 2px 0;
+	text-align: right;
+}
+
+.user-checkout-div {
+	margin: 20px auto 15px auto;
+	padding: 5px 5px;
+	position: relative;
+	width: 95%;
+	height: 100%;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+}
+	
+.user-checkout-div h1 {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.user-check-out-list img {
+	width: 15%;
+	float: left;
+	border: 2px solid black;
+	margin: 0.5%;
+}
+
+.user-check-out-list h3 {
+	width: 80%;
+	float: right;
+	font-size: 0.2em:
+	padding: 2px 0px;
+	margin: 0.5%;
+	text-align: left;
+	
+}
+
+
+.user-postcards-header {
+	margin: 20px auto 15px auto;
+	padding: 5px 5px;
+	position: relative;
+	width: 95%;
+	height:  20px;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+}
+
+.user-postcards-div {
+	background: inherit;
+	
+}
+.user-postcards-header {
+	height: 30px;
+}
+.user-postcards-header h1 {
+font-size: 1.2em;
+}
+
+
+.login-text-box {
+	margin: 20px auto 15px auto;
+	padding: 5px 5px;
+	position: relative;
+	width: 95%;
+	height:  160px;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+	
+}
+
+.login-text-box p {
+	display: block;
+	width: 100%;
+	margin: 0px auto;
+	padding-top: 10px;
+	clear: both;
+	
+}
+
+.login-text-box h1 {
+	font-size: 0.8em;
+	
+}
+
+.stories-upload-header {
+	font-size: 1.2em;
+	
+}
+
+/* *** Media setup of user profile */
+
+
+@media (min-width: 768px)  {
+
+	.register-button {
+		width: 50px;
+	}
+	
+	.register-div, 
+	.comment-container-div {
+	width: 400px;
+	}
+	
+	.user-pic-div {
+		display: inline-block;
+		width: 45%;
+		float: left;
+		position: relative;
+	}
+	.travel-status {
+		margin-top: 0px;
+		margin-right: -10px;
+		
+	}
+	
+	.user-stats-div {
+		width: 55%;
+		float: right;
+		display: inline-block;
+		margin-top: 30px;
+		margin-bottom: 0px;
+	}
+	
+	.user-basic-info-div {
+		width: 55%;
+		float: right;
+		display: inline-block;
+		margin-top: 30px;
+	}
+	
+	.user-basic-info-div p {
+		margin: 5px 0px;
+	}
+		
+	}
+	.user-postcards-wrapper {
+		float: right;
+		width: 47%;
+		margin-right: 2%;
+	}
+	
+	.user-checkout-div {
+		float: left;
+		width: 47%;
+		margin-left: 2%;
+	}
+	.login-text-box {
+		width: 400px;
+	}
+	.story-upload-container {
+		width: 400px;
+		
+	}
+	
+	.all-post-cards-container {
+		margin-bottom: 150px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

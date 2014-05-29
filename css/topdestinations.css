@@ -1,0 +1,128 @@
+.dest-guide-out-top {
+	margin: 5px auto;
+	text-align: middle;
+	position: relative;
+	width: 95%;
+	height: 40px;
+	border: 5px solid  #E5F2FF;
+	border-radius: 10px;
+	filter: none;
+    -webkit-filter: none;
+	box-shadow: 0px 0px 3px black;
+	background:  #E5F2FF;
+	float: both;
+	
+}
+
+
+a:-webkit-any-link {
+	text-decoration: none;
+}
+
+.content-row {
+	
+margin-bottom: 400px;
+}
+
+.dest-guide-out-top h1 {
+	padding: 2px;
+	font-family: Helvetica;
+	font-size: 1.5em;
+	color: #202020;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.dest-guide-right-scores {
+	margin: 5px 0 40px 0;
+	text-align: left;
+	position: relative;
+	width: 95%;
+	height: 300px;
+	border: 5px solid white;
+	border-radius: 10px;
+	filter: none;
+    -webkit-filter: none;
+	box-shadow: 0px 0px 3px black;
+	background: white;
+}
+
+.dest-guide-scores img {
+	height: 25px;
+	weight: 25px;
+	margin: 3px 15px 0px 10px;
+}
+
+.dest-guide-scores-img {
+	display: inline-block;
+	width: 10%;
+	position: table;
+	vertical-align: middle;
+	text-align:left;
+}
+
+
+.dest-guide-div-score-bg{
+	position: table;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 0;
+	margin:0;
+	height: 25px;
+	width: 85%;
+	background: #E5F2FF;
+}
+
+.dest-guide-div-score-pct {
+	display: inline-block;
+	padding: 0;
+	height: 25px;
+	margin: 0;
+	width: 45%;
+	background: #FF9400;
+	
+}
+
+.clear-link {
+	text-decoration: none;
+	
+}
+
+@media (min-width: 768px) {
+	
+	.dest-guide-left-pictures {
+		background: white;
+		margin: 5px auto;
+		text-align: middle;
+		position: relative;
+		float: left;
+		width: 35%;
+		margin-left: 2.5%;
+		height: 300px;
+		border: 5px solid white;
+		border-radius: 10px;
+		box-shadow: 0px 0px 3px black;
+		display: block;
+	}
+	
+	.dest-guide-right-scores {
+	float: right;
+	margin-right:2.5%;
+	width: 58%;
+	height: 300px;
+	}
+	
+	.dist-guide-story-pic-holders {
+	 width: 98%;
+	 height: 48%;
+	 margin: 1%;
+	}
+	
+	.dest-guide-out-top a {
+  text-decoration: none;
+	
+}
+
+	
+	
+}
