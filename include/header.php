@@ -61,9 +61,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						else { ?>
 							
 							<li><a href="<?php echo BASE_URL;?>users/login.php">Login</a></li>
-							<li>
-								<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
-							</li>
 							<li><a href="<?php echo BASE_URL;?>users/register.php">Register user</a></li>
 						<?php } ?> 
 						

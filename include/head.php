@@ -8,7 +8,7 @@
 
  	
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>css/normalize.css">
-	<link rel="stylesheet" href="<?php echo BASE_URL; ?>css/style.css">
+	<link rel="stylesheet" href="<?php echo BASE_URL; ?>css/style.css?version=2">
 	<link rel="shortcut icon" href="<?php echo BASE_URL; ?>img/kokomo_browser.ico">
 	<link href='http://fonts.googleapis.com/css?family=Crafty+Girls' rel='stylesheet' type='text/css'>
 	<meta name='description' content='<?php if (!empty($specific_meta)) {echo $specific_meta;} else { echo "Don’t know where to go holiday? Then you need Kokomo. Kokomo is a colorful site that helps you choose among the many travel destinations out there."; } ?>' >
