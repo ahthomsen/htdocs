@@ -1,23 +1,27 @@
 <html>
 <head>
-<title>Facebook Login JavaScript Example</title>
+<title>Kokomo login test</title>
 <meta charset="UTF-8">
 </head>
 <body>
 	
-<script>
+	<script>
   // This is called with the results from from FB.getLoginStatus().
 
-function kokomoFBlogout() {
-	FB.logout();
-	document.getElementById('status').innerHTML = '<a href="fblogin.php"" href="#">Confirm Logout</a>';
-     };
-   
+
   
   function kokomoFBlogin() {
   	FB.login(function(response) {
 	  if (response.status === 'connected') {
-	     		location.reload();
+      FB.api('/me', function(response) {
+	   var userinfo = response;
+	   var userid = userinfo.id;
+	   var useremail = userinfo.email;
+	   var userfirst = userinfo.first_name;
+	   var userlast = userinfo.last_name;
+	   var usergender = userinfo.gender;
+	  window.location = "fbinput.php?userid=" + userid + "&usermail=" + useremail + "&userfirst=" + userfirst + "&userlast=" + userlast + "&usergender=" + usergender ;  
+	 });
 	  } else if (response.status === 'not_authorized') {
 	      	 	location.reload();
 	  } else {
@@ -26,29 +30,6 @@ function kokomoFBlogout() {
 	});
   }
   
-  function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
-    if (response.status === 'connected') {
-      // Logged into your app and Facebook.
-      document.getElementById('status').innerHTML = '<a onclick="kokomoFBlogout()" href="#">Logout</a>';
-      FB.api('/me', function(response) {
-	   var userinfo = response;
-	   var userid = userinfo.id;
-	   var useremail = userinfo.email;
-	   var userfirst = userinfo.firstname;
-	   var userlast = userinfo.lastname;
-	   window.location = "fbinput.php?userid=" + userid + "&mail=" + useremail + "&userfirst=" + userfirst ;
-	 });
-    } else if (response.status === 'not_authorized') {
-      // The person is logged into Facebook, but not your app.
-      document.getElementById('status').innerHTML = '<a onclick="kokomoFBlogin()" href="#">Login</a>';
-    } else {
-      // The person is not logged into Facebook, so we're not sure if the are logged into Kokomo;
-	 document.getElementById('status').innerHTML = '<a onclick="kokomoFBlogin()" href="#">Login</a>';
-		 }
-	};
-
 
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
@@ -68,10 +49,6 @@ function kokomoFBlogout() {
     version    : 'v2.0' // use version 2.0
   });
 
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-
   };
 
   // Load the SDK asynchronously
@@ -87,14 +64,9 @@ function kokomoFBlogout() {
   // successful.  See statusChangeCallback() for when this call is made.
 
 </script>
-
-
 <div>
-	<a> Login via Facebook </a>
+	<a onclick="kokomoFBlogin()" href="#"> Login via Facebook </a>
 </div>
-
-
-
 <div id="status">
 </div>
 

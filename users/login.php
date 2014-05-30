@@ -2,7 +2,7 @@
 session_start();
 include_once("../scripts/config.php");
 $title = "Login with your user or register a new profile";
-$headinclude = '<link rel="stylesheet" href="../css/user.css">';
+$headinclude = '<link rel="stylesheet" href="../css/user.css?version=1">';
 $email = "";
 $msg_error = "";
 
@@ -59,7 +59,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 }
 	
 include( ROOT_PATH . "/include/head.php");
+// Note this is being included prior to the header info!
+include( ROOT_PATH . "/scripts/FBlogin.php");
+
 include( ROOT_PATH . "/include/header.php");
- 
 include(ROOT_PATH . "/core/login-content.php") ;
 include( ROOT_PATH . "/include/footer.php") ;?>	 

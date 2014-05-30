@@ -20,6 +20,9 @@ if(isset($_GET['error'])) {
 				<p> You are already logged in <a href="logout.php">click here to log out!</a></p>		
 				<?php }				
 				else { ?>
+				<div>
+					<a onclick="kokomoFBlogin()" href="#"><img style="width:100%;" src="<?php echo BASE_URL .'img/login_with_facebook.png';?>"></a>
+				</div>	
 					
 				<label class="register-text" for="login">
 					Email address
@@ -40,6 +43,7 @@ if(isset($_GET['error'])) {
 				
 				<?php } ?>				
 			</div>
+			<div style="height: 1px; clear: both;"></div>
 		</div>
 		<div>
 			<input class="register-button" type="submit" value="Go!">
