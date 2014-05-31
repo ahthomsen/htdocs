@@ -184,7 +184,7 @@ else
  } */
  ?>
  
- <div class="random_button_show <?php echo $random_button_hide;?>">
+ <div class="random_button_show">
  	<a href="<?php echo BASE_URL;?>destiny/destiny.php">Next!</a>
 
  </div>

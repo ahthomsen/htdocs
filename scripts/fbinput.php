@@ -45,25 +45,28 @@ if ($error == 0 ) {
 			}
 			// Change the session status to logged in using the user login id
 			log_on($user['USERID']);
-			header('Location: /userprofile/userprofile.php?user='.$user['USERID']);
+			header('Location:'.BASE_URL.'userprofile/userprofile.php?user='.$user['USERID']);
 			exit;
 			}
 		
 			// If the user does not already exists, the user is made in the system;
 			else {
 				
-					 try {   		 				 	
-					 $create_user_db= $db->prepare("INSERT INTO user (MAIL, FIRSTNAME, LASTNAME, GENDER, FACEBOOKID, COUNTRY, DAYOFBIRTH, FAV_DEST) VALUES(?, ?, ?, ?, ?, 'N/A', 'N/A', 'N/A')");
+					 try {
+					 $country = get_country_name();   		 				 	
+					 $create_user_db= $db->prepare("INSERT INTO user (MAIL, FIRSTNAME, LASTNAME, GENDER, FACEBOOKID, COUNTRY, DAYOFBIRTH, FAV_DEST) VALUES(?, ?, ?, ?, ?, ?, 'N/A', 'N/A')");
 					 $create_user_db->bindParam(1, $mail);
 					 $create_user_db->bindParam(2, $first);
 					 $create_user_db->bindParam(3, $last);
 					 $create_user_db->bindParam(4, $gender);
 					 $create_user_db->bindParam(5, $id);
+					 $create_user_db->bindParam(6, $country);
 					 $create_user_db->execute();
 					 
 					 
-					 $user_new_db = $db->prepare('SELECT * FROM user WHERE FACEBOOKID=?');
+					 $user_new_db = $db->prepare('SELECT * FROM user WHERE FACEBOOKID=? AND MAIL = ?');
 					 $user_new_db->bindParam(1, $id);
+					 $user_new_db->bindParam(2, $mail);
 					 $user_new_db->execute();
 					 $user_new = $user_new_db->fetch();	
 					 $_SESSION['userid'] = $user_new["USERID"];	
@@ -82,7 +85,7 @@ if ($error == 0 ) {
 					
 					mail($to,$subject,$body,$headers);  
 					
-					header('Location: /userprofile/userprofile.php?user='.$user_new['USERID']);
+					header('Location:'.BASE_URL.'userprofile/userprofile.php?user='.$user_new['USERID']);
 					
 					exit;										 
 				  }

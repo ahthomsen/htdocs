@@ -268,13 +268,13 @@ function get_travel_status($postcards, $places, $comments)
 	//RUTHLESS version:
 	$total = $postcards + $places + $comments;
 
-	if($total >= 150)$title="Indiana Jones";
-	if($total >= 125)$title="Explorer";
-	if($total >= 100)$title="Globerotter";
-	if($total >= 75)$title="Backpacker";
-	if($total >= 50)$title="Tourist";
-	if($total >= 25)$title="Weekend Traveller";
-	if($total < 25)$title="Travel Rookie";
+	if($total >= 35)$title="Indiana Jones";
+	if($total >= 30)$title="Explorer";
+	if($total >= 25)$title="Globerotter";
+	if($total >= 20)$title="Backpacker";
+	if($total >= 15)$title="Tourist";
+	if($total >= 10)$title="Weekend Traveller";
+	if($total < 5)$title="Travel Rookie";
 	return $title;
 }
 
@@ -377,4 +377,42 @@ function destination_stats($result) { ob_start();?>
 		</div>
 
 <?php  return ob_get_clean();} 
-?>
+
+      function get_content($URL){
+          $ch = curl_init();
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+          curl_setopt($ch, CURLOPT_URL, $URL);
+          $data = curl_exec($ch);
+          curl_close($ch);
+          return $data;
+      }
+	  
+	  function get_country_name() {
+	
+			if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+			   $ip = $_SERVER['HTTP_CLIENT_IP'];
+			} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+			    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+			} else {
+			    $ip = $_SERVER['REMOTE_ADDR'];
+			}
+			$json = file_get_contents("http://freegeoip.net/json/" . $ip);
+			$readable = json_decode($json, true);
+			return $readable['country_name'];
+	  }
+	  
+	  function get_country_code() {
+	
+			if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+			   $ip = $_SERVER['HTTP_CLIENT_IP'];
+			} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+			    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+			} else {
+			    $ip = $_SERVER['REMOTE_ADDR'];
+			}
+			$json = file_get_contents("http://freegeoip.net/json/" . $ip);
+			$readable = json_decode($json, true);
+			return $readable['country_code'];
+	  }
+	  
+	  
