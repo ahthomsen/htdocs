@@ -33,12 +33,15 @@ else
 		
 	</div>
 	
+	
 	<div class="dest-show-main-picture">
-			<img src="<?php echo BASE_URL; ?>destinations/img/<?php echo $results_dest['DestImg1']; ?>" alt="<?php echo $destination;?>">
-			<div style="position: relative"></div>
-			<img src="<?php echo BASE_URL; ?>destinations/img/<?php echo $results_dest['DestImg2']; ?>" alt="<?php echo $destination;?>">
-			
+				<img src="<?php echo BASE_URL; ?>destinations/img/<?php echo $results_dest['DestImg1']; ?>" alt="<?php echo $destination;?>">
+				<div style="position: relative"></div>
+				<img src="<?php echo BASE_URL; ?>destinations/img/<?php echo $results_dest['DestImg2']; ?>" alt="<?php echo $destination;?>">
+				
+	
 	</div>
+
 	
 	 <div class="dest-kokomo-stats-div">
    		  <ul>
@@ -122,54 +125,34 @@ else
 	
 	<?php } ?>
 	
-	<?php if($comment[0]['count']!=0) { ?>
+
 	
-		 <div class="dest-comment-container">
-			<ul class="dest-comment-container-ul">
-			
-		<?php //code block that generates a comment html output
-		//for each comment in the $comment array
+	<div class="dest-comment-container">
+		<div class="fb-comments" data-numposts="5" data-width="100%" data-href="http://kokomoholiday.com<?php echo BASE_URL.'destinations/destinations.php?dest='.$results_dest['DESTID'];?>" data-numposts="5" data-colorscheme="light"></div>
+	</div>
 	
-		foreach($comment as $element)
-		{			
-			if($element['USERID']==FALSE)$element['FIRSTNAME']='Anonymous';
-			?>
-				<li>
-				<div class="dest-comments-div">
-				<h2><?php echo htmlentities($element["HEADER"]);?></h2>
-				<h3><?php echo htmlentities($element["PARAGRAPH"]);?></h3>
-				<p><?php echo htmlentities($element["FIRSTNAME"]) . ', ' . $element["DATE"];?></p>				
-				</div>				
-				</li>	
-			<?php		 
-		}	 
-		?>		
-		
-		
-		
-			</ul>	
-		
-		</div>
-	
-	<?php } ?>
-	
-	<div class="cc-links-div">
-   		  <ul>
-   			<li>
-   				<p><a href="<?php echo $results_dest['Cclink1'];?>">Photo</a> by <?php echo $results_dest['Ccname1'] ;?>, <a href="http://creativecommons.org/licenses/by/2.0/"> CC BY 2.0</a></p>
-   			</li>
-   			<!--    --  new item   -->
-   			<li>
-   				<p><a href="<?php echo $results_dest['Cclink2'];?>">Photo</a> by <?php echo $results_dest['Ccname2'] ;?>, <a href="http://creativecommons.org/licenses/by/2.0/"> CC BY 2.0</a></p>
-   			</li>
-   			<!--    --  new item   -->   	   			   				
-   		</ul>
-   </div>
+	      <div class="cc-links-div">
+		   		  <ul>
+		   			<li>
+		   				<p><a href="<?php echo $results_dest['Cclink1'];?>">Photo</a> by <?php echo $results_dest['Ccname1'] ;?>, <a href="http://creativecommons.org/licenses/by/2.0/"> CC BY 2.0</a></p>
+		   			</li>
+		   			<!--    --  new item   -->
+		   			<li>
+		   				<p><a href="<?php echo $results_dest['Cclink2'];?>">Photo</a> by <?php echo $results_dest['Ccname2'] ;?>, <a href="http://creativecommons.org/licenses/by/2.0/"> CC BY 2.0</a></p>
+		   			</li>
+		   			<!--    --  new item   -->   	   			   				
+		   		</ul>
+	   	</div>
+
 	
 	<div style="clear:both; height: 150px;"></div>
+	
+	
 		
 </div>
 	
+
+   	
  
  
  <!-- After the actual  content -->

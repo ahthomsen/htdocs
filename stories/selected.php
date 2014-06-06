@@ -24,6 +24,7 @@ else {
 	FROM postcards JOIN dest ON postcards.DESTID = dest.DESTID ORDER BY rand() LIMIT 1");
 	$selectcard_db -> execute();
 	$selectcard = $selectcard_db->fetch();
+	$cardnumber = $selectcard['CARDID'];
 	}
 	catch (Exception $e) {
 	echo "Could not connect to database!";

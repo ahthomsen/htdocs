@@ -28,12 +28,12 @@
 		<ul>
    			<li>
     			<h2>Send to select friends: </h2>
-   				<div class="fb-send"  style="float: right; margin: 5px 5px;" data-href='<?php echo "http://kokomoholiday.com/stories/selected.php?cardid=" . $selectcard['CARDID'] ;?>' data-width="50px" data-colorscheme="light"></div>				
+   				<div class="fb-send"  style="float: right; margin: 5px 5px;" data-href="<?php echo 'http://kokomoholiday.com'.BASE_URL.'stories/selected.php?cardid=' . $cardnumber ;?>" data-width="50px" data-colorscheme="light"></div>				
    			</li>
    			<!--    --  new item   -->   		
    			<li>
    				<h2>Shared with group of friends: </h2>
-   				<div class="fb-share-button"  style="float: right; margin: 5px 5px;" data-href='<?php echo "http://kokomoholiday.com/stories/selected.php?cardid=" . $selectcard['CARDID'] ;?>' data-type="button"></div>				
+   				<div class="fb-share-button"  style="float: right; margin: 5px 5px;" data-href='<?php echo "http://kokomoholiday.com".BASE_URL."stories/selected.php?cardid=" . $cardnumber ;?>' data-type="button"></div>			
    			</li>
    			<!--    --  new item   -->   		   				
    		</ul>
@@ -49,6 +49,10 @@
 		<?php } ?>
 		
 		<div style="clear:both"></div>
+		
+		<div class="content-container-narrow">
+			<div class="fb-comments" data-numposts="5" data-width="100%" data-href="http://kokomoholiday.com<?php echo BASE_URL.'stories/stories.php?cardid='.$cardnumber?>" data-numposts="5" data-colorscheme="light"></div>
+		</div>
 		
 </div>
 
