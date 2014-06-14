@@ -27,7 +27,7 @@
 		<div class="content-container-narrow">
 		<ul>
    			<li>
-    			<h2>Send to select friends: </h2>
+    			<h2>Send to selected friends: </h2>
    				<div class="fb-send"  style="float: right; margin: 5px 5px;" data-href="<?php echo 'http://kokomoholiday.com'.BASE_URL.'stories/selected.php?cardid=' . $cardnumber ;?>" data-width="50px" data-colorscheme="light"></div>				
    			</li>
    			<!--    --  new item   -->   		

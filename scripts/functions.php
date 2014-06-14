@@ -401,6 +401,8 @@ function destination_stats($result) { ob_start();?>
 			return $readable['country_name'];
 	  }
 	  
+	  
+	  
 	  function get_country_code() {
 	
 			if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
@@ -414,5 +416,12 @@ function destination_stats($result) { ob_start();?>
 			$readable = json_decode($json, true);
 			return $readable['country_code'];
 	  }
-	  
+
+function get_instagram_media_count($what) {
+			$json = file_get_contents("https://api.instagram.com/v1/tags/".$what."?access_token=1379550292.f59def8.86a2bf75ea804105ac50267d8f43fe6d");
+			$readable = json_decode($json, true);
+			return number_format($readable["data"]["media_count"]);
+}
+	 
+	
 	  

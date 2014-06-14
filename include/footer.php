@@ -39,14 +39,15 @@ require_once(ROOT_PATH . "scripts/functions.php");
 			<div class="feedback-botton mobile-hidden">
 				<a href="mailto:feedback@kokomoholiday.com"> Give <br> Feedback </a>
 			</div>
-			
-			<div class="footer-last-line footer mobile-hidden clearfix">
+
+			<!--<div class="footer-last-line footer mobile-hidden clearfix">
 				<ul class="clearfix">
 					<li>
 						<p>  &copy;2014 kokomo</p>
 					</li>
 				</ul>
 			</div>
+		-->
 		</footer>
 	</div>
 </body>

@@ -39,9 +39,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 
-	<div style="position: relative;" class="main-wrapper">
+	<div class="main-wrapper">
 		<header class="main-header">
-		<img src="<?php echo BASE_URL . 'img/kokomo_just_the_k.png';?>" class="main-logo-mobile">
 		<div class="header-container top">
 			<ul class="main-nav-search group top">
 				<li class="nav-search-li">
@@ -51,8 +50,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					</form>	
 				</li>
 				</ul>
-			
-			<ul class="main-nav group top">
+			<h1 class="main-logo top"><a href="<?php echo BASE_URL;?>">kokomo</a></h1>
+			<ul class="main-nav-menu group top">
 				<li class="nav-menu-li"><a href="#">Menu</a>
 					<ul class="nav-dropdown">
 						
@@ -97,5 +96,4 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				
 			</ul>
 		</div>
-				<h1 class="main-logo top"><a href="<?php echo BASE_URL;?>">kokomo</a></h1>
 	</header>

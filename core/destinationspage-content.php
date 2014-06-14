@@ -27,18 +27,18 @@ else
 		
 	</div>
 	
-	<div class="dest-show-main-content">
 
-			<p><?php echo $results_dest["DestText"] ?></p>
-		
-	</div>
 	
 	
 	<div class="dest-show-main-picture">
 				<img src="<?php echo BASE_URL; ?>destinations/img/<?php echo $results_dest['DestImg1']; ?>" alt="<?php echo $destination;?>">
 				<div style="position: relative"></div>
 				<img src="<?php echo BASE_URL; ?>destinations/img/<?php echo $results_dest['DestImg2']; ?>" alt="<?php echo $destination;?>">
-				
+				<div class="dest-show-main-content">
+
+			
+		
+	</div>
 	
 	</div>
 
