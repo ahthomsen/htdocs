@@ -3,6 +3,7 @@ require(ROOT_PATH . "scripts/database.php");
 
 if (isset($_SESSION['userid'])) {
 $user = $_SESSION['userid'];	
+
 }
 else {
 $user = session_id();
@@ -103,124 +104,98 @@ $user = session_id();
 	 visits = <?php if (!empty($visited_count)) {echo $visited_count;} else {echo '0';}?>;
 	 saved = <?php if (!empty($saved_count)) {echo $saved_count;} else {echo '0';}?>;
 
-	 function travel_status(c_visited) {
-	 	var score = c_visited;
-	 	var status = "";
-	 	switch (true) {
-	 		case (score < 5):
-	 			status = 'Travel Rookie';
-	 			return status;
-	 			break;
-	 		case (score < 10):
-	 			status = 'Weekend Traveller';
-	 			return status;
-	 			break;
-	 		case (score < 15):
-	 			status = 'Tourist';
-	 			return status;
-	 			break;
-	 		case (score < 20):
-	 			status = 'Backpacker';
-	 			return status;
-	 			break;
-	 		case (score < 25):
-	 			status = 'Globetrotter';
-	 			return status;
-	 			break;
-	 		case (score < 30):
-	 			status = 'Explorer';
-	 			return status;
-	 			break;
-	 		case (score < 30000000):
-	 			status = 'Indiana Jonas';
-	 			return status;
-	 			break;
-	 		}
-	 		
-	 	}
-
-
-
-	 
-	 
-		function i_been_already(destid) {
-			var dest_text = destid + 'text';
-			var dest_already = destid + 'already';
-			var dest_pin = destid + 'pin';
-			document.getElementById(dest_text).style.display = 'none';
-			document.getElementById(dest_pin).onmouseover=null; 
-			document.getElementById(dest_pin).onmouseout=null;
-			document.getElementById(dest_already).style.display = 'block';
-			visits = visits + 1;
-			document.getElementById('travel_status').innerHTML = '= ' + travel_status(visits);
-			document.getElementById('session_visits').innerHTML = '= ' + visits;
-		}
-		function already_rec(answer,destid) {
-		var feedback = answer;
-		var dest_pin = destid + 'pin';
-		document.getElementById(dest_pin).style.display = 'none';
-		// The function that push information to the php
-		var rec = answer;
-		var dest_to_save = destid;
-		var jqxhr = $.post('<?php echo BASE_URL . "scripts/fronttodb.php";?>',{destid: destid, rec: rec})
-
-        // success
-        .done(function (response){
-            var obj = $.parseJSON(response);
-            if (obj.contentNum !== null) {
-                $("#test").text(obj.contentNum);
-            }
-        })
-
-        // always
-        .always(function () {
-            // re-enable inputs
-         
-  		  });
-		
-		
-		}
-		function check_out_later(destid) {
-		var dest_pin = destid + 'pin';
-		document.getElementById(dest_pin).style.display = 'none';
-		saved = saved + 1;
-		document.getElementById('session_saved').innerHTML = '= ' + saved;
-		var dest = destid;
-		var save = 1;
-		var jqxhr = $.post('<?php echo BASE_URL . "scripts/fronttodb.php";?>',{destid: dest, save: save})
-        // success
-        .done(function (response){
-        })
-        // always
-        .always(function () {
-            // re-enable inputs  
-  		  });
-		}
-
-		
 	</script>
+	<script src="<?php echo BASE_URL .'scripts/kokomo.js';?>"></script>
+	
+	<div id="backcover-start" onclick="this.style.display = 'none';" <?php if (isset($_GET['more'])) {echo "style='display: none;'";} ?>>
+		<div class="front-cover">
+			<p>Hey there! Go find your next holiday destination. Here’s how:</p>
+			<ul>
+				<li>
+					<a>
+						<h2>1: Move the cursor to any destination</h2>
+					</a>
+				</li>
+				<li>
+					<a>
+						<h2>2: Select from the presented options</h2>
+					</a>
+				</li>
+				<li>
+					<a>
+						<h2>3: Click the orange stats in the lower left corner to get recommendations</h2>
+					</a>
+				</li>
+				<li>
+					<a>
+						<h2>4: Scroll down for more destinations, tests etc.</h2>
+					</a>
+				</li>
+			</ul>
+			<p>Click anywhere to close this window!</p>
+		</div>
+	</div>
+
+	
+	
 	
 	<div class="all-post-cards-container"></div>
 	<div id="columns">
 
 	
-		<?php foreach($dests as $dest) { ?>		
+		<?php foreach($dests as $dest) { 
+		
+		$insta_count_db = $db->prepare("SELECT * FROM instagram_pictures WHERE DESTID = ?");
+		$insta_count_db->bindparam(1,$dest['DESTID']);
+		$insta_count_db->execute();
+		$insta_count = $insta_count_db->fetch();
+		$insta_count = count($insta_count);
+		
+		$twit_count_db = $db->prepare("SELECT *FROM twitter_tweets WHERE DESTID = ?");
+		$twit_count_db->bindparam(1,$dest['DESTID']);
+		$twit_count_db->execute();
+		$twit_count = $twit_count_db->fetch();
+		$twit_count = count($twit_count); 
+		
+	
+		
+			
+			$attribute = array_slice($dest, 11, 10);
+		
+			$rank1 = "Beaches";
+			$rank2 = "Cityfeel";
+			$rank3 = "Museums";
+			$rank4 = "Nature";
+			$score1 = 0;
+			$score2 = 0;
+			$score3 = 0;
+			$score4 = 0;
+				
+			while ($att_score = current($attribute)) {
+				if ($att_score >= $score1) {$rank4 = $rank3; $rank3 = $rank2; $rank2 = $rank1; $score4 = $score3; $score3 = $score2; $score2 = $score1; $rank1 = key($attribute); $score1 = $att_score; next($attribute);}
+				elseif ($att_score >= $score2) {$rank4 = $rank3; $rank3 = $rank2; $score4 = $score3; $score3 = $score2; $rank2 = key($attribute); $score2 = $att_score; next($attribute);}
+				elseif ($att_score >= $score3) {$rank4 = $rank3; $score4 = $score3; $rank3 = key($attribute); $score3 = $att_score; next($attribute);}
+				elseif ($att_score >= $score4) {$rank4 = key($attribute); $score4 = $att_score; next($attribute); }
+				else {next($attribute);}
+			}
+				
+			?>		
+			
 			<a class="<?php echo $hideclass;?>" href="<?php echo BASE_URL . 'destinations/destinations.php?dest=' . $dest['DESTID'];?>" style="color: black; text-decoration: none;" >
 				<div class="pin" id="<?php echo $dest['DESTID'].'pin';?>" onmouseover="document.getElementById('<?php echo $dest['DESTID'].'text';?>').style.display = 'block';"
 						onmouseout="document.getElementById('<?php echo $dest["DESTID"].'text';?>').style.display = 'none';">
 					<div class="dest-show-main-picture">
-							
 							<div class="dest-show-main-content">
 								<p><?php echo $dest["Destinationfullname"] ?></p>
-								<div class="social-scores" style="display: none;">
+								<div class="social-scores">
 									<ul>
 										<li>
 											<img src="<?php echo BASE_URL . 'img/twittersmall.jpeg';?>">
-											<p><?php echo $dest['twitter_count'];?></p>
+											<p><?php echo $twit_count;?></p>
 										</li>
 										<li>
 											<img src="<?php echo BASE_URL . 'img/instagramsmall.jpeg';?>">
-											<p><?php echo $dest['instagram_count'];?></p>
+											<p><?php echo $insta_count;?></p>
 										</li>
 									</ul>
 								</div>
@@ -230,25 +205,40 @@ $user = session_id();
 							<div class="dest-score-show">
 								<p><?php echo substr($dest['AvgScore'],0,3);?></p>
 							</div>
+							<div style="clear: both"></div>
 							<div class="dest-text" id="<?php echo $dest['DESTID'].'text'?>">
+							
 								<p style="color: black; text-decoration: none;"><?php echo $dest['DestText'];?></p>
 								<ul class="dest-actions">
 									<li>
-										<a onclick="i_been_already(<?php echo $dest['DESTID'];?>)">I been already</a>
+										<a href="javascript:void(0)" onclick="i_been_already(<?php echo $dest['DESTID'];?>)">I been already</a>
 									</li>
 									<li>
-										<a onclick="check_out_later(<?php echo $dest['DESTID'];?>)">Check out later</a>
+										<a href="javascript:void(0)" onclick="check_out_later(<?php echo $dest['DESTID'];?>)">Check out later</a>
 									</li>
 									<li>
-										<a  href="<?php echo BASE_URL.'destinations/destinations.php?dest='.$dest['DESTID'];?>">Check out now</a>
+										<a href="<?php echo BASE_URL.'destinations/destinations.php?dest='.$dest['DESTID'];?>">Check out now</a>
+									</li>
+									<li>
+										<a href="<?php echo $dest['BookinglinkBrowser'];?>">Book now</a>
 									</li>
 								</ul>
+								<div class="challenge-city-scores">
+									<h3><img src="<?php echo BASE_URL . "img/".strtolower($rank1).".png" ?>" alt="<?php echo $rank1;?>"><p><?php echo $score1;?></p></h3>
+									<h3><img src="<?php echo BASE_URL . "img/".strtolower($rank2).".png" ?>" alt="<?php echo $rank2;?>"><p><?php echo $score2;?></p></h3>
+									<h3><img src="<?php echo BASE_URL . "img/".strtolower($rank3).".png" ?>" alt="<?php echo $rank3;?>"><p><?php echo $score3;?></p></h3>
+									<h3><img src="<?php echo BASE_URL . "img/".strtolower($rank4).".png" ?>" alt="<?php echo $rank4;?>"><p><?php echo $score4;?></p></h3>
+									<div class="challenge-white-space" style="claer: both; height: 2px;"></div>
+									<a href="<?php echo BASE_URL . 'destinationguide/destinationguide.php';?>">What does these icons mean?</a>
+								</div>
 							</div>
+							
 							<div id="<?php echo $dest['DESTID'].'already';?>" class="dest-already">
 								<p>Will you recommend <?php echo $dest['Destinationfullname'];?>?</p>
-								<img onclick="already_rec('yes',<?php echo $dest['DESTID'];?>);" src="<?php echo BASE_URL . 'img/thumpup.png';?>">
-								<img onclick="already_rec('no',<?php echo $dest['DESTID'];?>);" src="<?php echo BASE_URL . 'img/thumpdown.png';?>">
+								<a href="javascript:void(0)"><img  onclick="already_rec('yes',<?php echo $dest['DESTID'];?>);" src="<?php echo BASE_URL . 'img/thumpup.png';?>"></a>
+								<a href="javascript:void(0)"><img onclick="already_rec('no',<?php echo $dest['DESTID'];?>);" src="<?php echo BASE_URL . 'img/thumpdown.png';?>"></a>
 							</div>
+							
 
 					</div>
 				</div>	
@@ -256,6 +246,7 @@ $user = session_id();
 		<?php } ?>
 	</div>
 		<div class="dest-session-stats">
+			<a href="<?php echo BASE_URL . 'userstats/userstats.php';?>">
 			<ul>
 				<li>
 					<img src="<?php echo BASE_URL.'img/globe_visit.png';?>">
@@ -270,6 +261,7 @@ $user = session_id();
 					<p id="travel_status"></p>
 				</li>
 			</ul>
+			</a>
 		</div>	
 
 	</div>
@@ -302,7 +294,7 @@ $user = session_id();
 		<p>Find your next holiday destination..</p>
 		<ul>
 			<li>
-				<a href="<?php echo BASE_URL;?>">
+				<a href="<?php echo BASE_URL.'index.php?more=1';?>">
 					<h2>Browse more destinations</h2>
 				</a>
 			</li>
@@ -312,13 +304,14 @@ $user = session_id();
 				</a>
 			</li>
 			<li>
-				<a href="<?php echo BASE_URL . 'citychallenge/citychallenge.php';?>">
-					<h2>Take the city challenge</h2>
+				<a href="<?php echo BASE_URL . 'userstats/userstats.php';?>">
+					<h2>Get destination recommendations</h2>
 				</a>
 			</li>
 		</ul>
 	</div>
 </div>
+
 
 
 

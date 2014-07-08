@@ -28,8 +28,7 @@ $specific_meta = "Search for destinations for your next holiday or vacation. Rea
 			try 
 			{	//retrieve data 
 				//first returns destinations
-				$destinations = $db->prepare("SELECT dest.DESTID AS DESTID, AvgScore, Destinationfullname, DestText, DestImg1, Beaches
-				FROM dest WHERE Destinationfullname LIKE ? OR DestText LIKE ?");
+				$destinations = $db->prepare("SELECT * FROM dest WHERE Destinationfullname LIKE ? OR DestText LIKE ?");
 	
 		 		$destinations->bindValue(1, "%" . $search_term . "%");
 				$destinations->bindValue(2, "%" . $search_term . "%");
@@ -38,11 +37,11 @@ $specific_meta = "Search for destinations for your next holiday or vacation. Rea
 				
 				
 				//secondly returns postcards
-				$stories = $db->prepare("SELECT Destinationfullname, HEADLINE, NAMEONCARD, CARDID, YEAR, postcards.DESTID AS DESTID, STORY_TAGS, OWN_RANKING, PICNUMBER, PICTYPE FROM postcards JOIN dest ON dest.DESTID = postcards.DESTID WHERE HEADLINE LIKE ? OR STORY_TAGS LIKE ?");
-		 		$stories->bindValue(1, "%" . $search_term . "%");
-				$stories->bindValue(2, "%" . $search_term . "%");
-				$stories->execute();
-				$story = $stories->fetchAll();
+				//$stories = $db->prepare("SELECT Destinationfullname, HEADLINE, NAMEONCARD, CARDID, YEAR, postcards.DESTID AS DESTID, STORY_TAGS, OWN_RANKING, PICNUMBER, PICTYPE FROM postcards JOIN dest ON dest.DESTID = postcards.DESTID WHERE HEADLINE LIKE ? OR STORY_TAGS LIKE ?");
+		 		//$stories->bindValue(1, "%" . $search_term . "%");
+				//$stories->bindValue(2, "%" . $search_term . "%");
+				//$stories->execute();
+				//$story = $stories->fetchAll();
 				
 				
 			}

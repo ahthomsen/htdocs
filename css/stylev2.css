@@ -14,6 +14,7 @@ body {
  margin-bottom: 150px;
 }
 body {
+	
 	font: normal 0.9em/1.3 Helvetica;
 	color: #222;
 	background-color: #edeff0;
@@ -70,7 +71,7 @@ html[xmlns] .clearfix {
 	display:none;
 }
 
-#backcover {
+#backcover, #backcover-start {
 	display: none;
 	position: fixed;
 	top: 0;
@@ -79,16 +80,18 @@ html[xmlns] .clearfix {
 	background: rgba(0,0,0,0.5);
 	z-index: 1000000000000000000;
 }
+#backcover-start {
+	display: block;
+}
 
 .front-cover {
 	position: fixed;
 	top: 30%;
 	left: 50%;
-	margin-left: -150px;
-	width: 300px;
+	margin-left: -45%;
+	width: 90%;
 	padding: 10px;
 	background: #F0F0F0;
-	border-radius: 10px;
 	border: solid 2px #FF9400;
 	text-align: center;
 }
@@ -100,7 +103,7 @@ html[xmlns] .clearfix {
 	padding: 5px;
 	margin: 5px auto;
 	border-radius: 10px;
-	width: 250px;
+	width: 90%;
 	background: #FF9400; 
 	text-align: center;
 }
@@ -110,16 +113,7 @@ html[xmlns] .clearfix {
 }
 
 .scroll-guide {
-	position: fixed;
-	bottom: 40px;
-	right: 10px;
-}
-.scroll-guide h2 {
-	background: rgba(255,255,255,0.8);
-	padding: 5px;
-	font-size: 0.8em;
-	border-radius: 10px;
-	border: dotted 2px grey;
+	display: none;
 }
 
 /* Layout Element Colors
@@ -144,7 +138,7 @@ html[xmlns] .clearfix {
 	padding: 5px;
 	height: 55px;
 	border-bottom: 2px solid #009ECE;
-	box-shadow: 0px 0px 5px black;
+	/*box-shadow: 0px 0px 5px black;*/
 }
 
 .main-nav li {
@@ -265,10 +259,11 @@ margin: 2px auto;
 	margin: 5px auto;
 	position: relative;
 	width: 95%;
-	height: 150px;
+	height: 70px;
+	text-align: center;
 	border: 2px solid white;
 	border-radius: 10px;
-	box-shadow: 0px 0px 3px black;
+	/*box-shadow: 0px 0px 3px black;*/
 }
 
 /*   testing colorless pictures */
@@ -325,25 +320,7 @@ margin: 2px auto;
 	border-radius: 5px 5px 0 0;
 }
 
-.content-area1 {
-	background-repeat: no-repeat;
-	background:url(../img/new_city11.jpeg);
-}
 
-.content-area2 {
-	background-repeat: no-repeat;
-	background:url(../img/new_concert11.jpeg);
-}
-
-.content-area3 {
-	background-repeat: no-repeat;
-	background:url(../img/new_mountain11.jpeg);
-}
-
-.content-area4 {
-	background-repeat: no-repeat;
-	background:url(../img/new_couple11.jpeg);
-}
 
 
 
@@ -356,7 +333,7 @@ margin: 2px auto;
 	height: 45px;
 	z-index: 100;	
 	border-top: 2px solid #009ECE;
-	box-shadow: 0px 0px 5px black;
+	/*box-shadow: 0px 0px 5px black;*/
 	}
 	
 .footer-stories {
@@ -670,10 +647,6 @@ margin: 2px auto;
 	text-align: right;
 	
 }
-
-
-
-
 .social-scores ul li img {
 	width: 12px;
 	height: 12px;
@@ -682,9 +655,9 @@ margin: 2px auto;
 }
 
 
-.social-scores ul li {
-	display
-}
+
+
+
 
 .anchor-middle-orange {
 	font-size: 0.8em;
@@ -712,30 +685,6 @@ margin: 2px auto;
 	right: 10px;
 	bottom: 2px;	
 }
-
-
-.dest-score-show {
-	position: absolute;
-	bottom: -17px;
-	right: 10px;
-	width: 45px;
-	height: 45px;
-	background: orange;
-	border-radius: 100%;
-	font-size: 1.2em;
-	text-align: center;
-}
-
-.dest-score-show  p {
-	margin: 12px 10px;
-	color: white;
-}
-
-.dest-tex {
-	
-	
-}
-
 
 
 
@@ -773,8 +722,8 @@ margin: 2px auto;
 
 .dest-session-stats {
 	position: fixed;
-	bottom: 55px;
-	left: 10px;
+	bottom: 5px;
+	left: 5px;
 	height: 38px;
 	background: orange;
 	text-align: center;
@@ -782,6 +731,13 @@ margin: 2px auto;
 	border-radius: 10px;
 	z-index: 1000000000;
 }
+
+.dest-session-stats a {
+	text-decoration: none;
+	color: black;
+	
+}
+
 
 .dest-session-stats ul li {
 	display: inline-block;
@@ -801,8 +757,70 @@ margin: 2px auto;
 	display:inline-block;
 }
 
+.challenge-city-name h2 {
+	margin: 15px auto 5px auto;
+	text-align: center;
+	padding: 5px 5px; 
+	background-color:white;
+	filter:alpha(opacity=30); 
+	opacity:.8;
+	border-radius: 10px;
+	width: 80%;
+	border: 5px solid #FF9400;
+}
+.challenge-city-scores img {
+	height: 30px;
+	width: 30px;
+	margin-right: 15px;
+	margin-top: 5px;
+	margin-bottom: -5px;
+}
+
+.challenge-city-scores {
+	margin: 30px auto 10px auto;
+	text-align: center;
+	width: 80%;
+	background: white;
+}
+
+.challenge-city-scores {
+	margin: 15px auto 5px auto;
+	text-align: center;
+	padding: 5px 5px; 
+	background-color:white;
+	filter:alpha(opacity=60); 
+	opacity:.8;
+	border-radius: 10px;
+	width: 80%;	
+	border: 5px solid #FF9400;
+	
+}
 
 @media (min-width: 768px)  {
+	
+	.scroll-guide {
+	position: fixed;
+	bottom: 40px;
+	right: 10px;;
+}
+.scroll-guide h2 {
+	background: rgba(255,255,255,0.8);
+	padding: 5px;
+	font-size: 0.8em;
+	border-radius: 10px;
+	border: dotted 2px grey;
+}
+
+.front-cover {
+
+	margin-left: -250px;
+	width: 500px;
+
+}
+
+.front-cover ul li h2 {
+	width: 450px;
+}
 	
 	.main-logo-mobile {
 		display: none;
@@ -1067,6 +1085,18 @@ margin: 2px auto;
 /******* END of Tablet setup*****/
 
 @media (min-width: 850px)  {
+	
+	.dest-session-stats {
+	position: fixed;
+	bottom: 55px;
+	left: 10px;
+	height: 38px;
+	background: orange;
+	text-align: center;
+	padding: 5px;
+	border-radius: 10px;
+	z-index: 1000000000;
+}
 
 	.content-row {
 		width: 800px;
@@ -1570,6 +1600,16 @@ border: 1% solid white;
 	z-index: 1;
 	background-color:white; /*filter:alpha(opacity=70); opacity:.8; */
 }
+
+.dest-show-main-content-fb {
+	position: relative;
+}
+
+.dest-text {
+	background-color: rgba(255,255,255,0.8)
+	
+}
+
 .dest-text {
 	z-index: 2;
 	top: 35px;
@@ -1598,12 +1638,17 @@ border: 1% solid white;
 	text-decoration: none;
 }
 
-.dest-show-main-content p {
+.dest-show-main-content p, .dest-show-main-content a, .dest-show-main-picture p {
 	padding: 5px;
 	margin: 0;
 	color: black;
-	display: block;
+	display: inline-block;
 	text-align: left;
+}
+.dest-show-main-picture p {
+
+	margin-bottom: -2px;
+
 }
 
 .dest-show-main-picture {
@@ -1639,6 +1684,11 @@ border: 1% solid white;
     -webkit-filter: none;
 	box-shadow: 0px 0px 3px black;
 	background:  white;
+}
+
+.challenge-city-scores a {
+	text-decoration: none;
+	color: black;
 }
 
 .dest-kokomo-stats-div {
@@ -1886,7 +1936,20 @@ border: 1% solid white;
 }
 	
 	
-
+.dest-rec-bar h2 {
+	background:white;
+	color: #009ECE;
+	margin: 2px auto;
+	width: 100%;
+	font-size: 1.1em;
+	padding: 5px;
+	text-align: center;
+	border: solid 2px #009ECE;
+	border-left: none;
+	border-right: none;
+	
+	
+}
 
 
 @media (min-width: 800px)  {
@@ -1938,4 +2001,195 @@ border: 1% solid white;
 	display:block;
 	padding: 10px;
 	background-color:rgba(255,255,255,0.8);
+}
+
+.challenge-city-scores img {
+	height: 30px;
+	width: 30px;
+	margin-right: 15px;
+	margin-top: 5px;
+	margin-bottom: -5px;
+}
+
+.challenge-city-name  {
+	text-align: center;
+	position: relative;
+	margin: 10px auto;
+	padding-top: 1px;
+	width: 98%
+}
+
+.challenge-city-scores h3 {
+ width:39%;
+ display:inline-block;
+ font-size: 1.2em;
+
+}
+
+
+.challenge-city-scores h3 p {
+display: inline;
+background: #FF9400;
+padding: 10px 15px;
+ border-radius: 100%;
+}
+
+.item-picture {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	min-width: 25px;
+}
+.item-picture img {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	float: left;
+}
+
+.dest-guide-right-scores {
+	margin: 0px;
+	text-align: left;
+	position: relative;
+	width: 98%;
+	background: white;
+}
+
+.dest-guide-scores img {
+	height: 25px;
+	weight: 25px;
+	margin: 3px 15px 0px 10px;
+}
+
+.dest-guide-scores-img {
+	display: inline-block;
+	width: 10%;
+	position: table;
+	vertical-align: middle;
+	text-align:left;
+	margin: 0 10px 0 0px;
+}
+
+.output-beaches {
+	padding-top: 40px;
+}
+
+.output-entertainment {
+	padding-bottom: 5px;
+}
+
+
+.dest-guide-div-score-bg{
+	position: table;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	height: 25px;
+	width: 80%;
+	background: #E5F2FF;
+}
+
+.dest-guide-div-score-pct {
+	display: inline-block;
+	padding: 0;
+	height: 25px;
+	margin: 0;
+	width: 45%;
+	background: #FF9400;
+	
+}
+.dest-menu ul li {
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 10px;
+	background: #FF9400;
+
+}
+
+.dest-menu {
+	position: fixed;
+	text-align: center;
+	width: 450px;
+	bottom: 5px; /* or whatever position is desired */
+    left: 50%;
+    margin-left: -225px;
+    z-index: 100000000000;
+}
+
+.dest-menu ul li	 a {
+	text-decoration: none;
+	color: white;
+}
+.twitter-content img {
+	width: 25%;
+	display: inline-block;
+	padding-top: 45px;
+	padding-left: 10px;
+	float: left;
+}
+.twitter-content div {
+	display:inline-block;
+	width: 70%;
+	padding-top: 28px;
+	padding-left: 10px;
+	min-height: 150px;
+}
+
+.twitter-content div h2, .twitter-content div h3 {
+	font-size: 0.9em;
+	font-style:italic;
+}
+
+.twitter-content div h3 {
+	text-align: right;
+}
+
+@media (min-width: 796px)  {
+	.dest-menu {
+		bottom: 50px;
+	}
+}
+
+.dest-score-show {
+	position: absolute;
+	bottom: -17px;
+	right: 10px;
+	width: 45px;
+	height: 45px;
+	background: white;
+	border: 3px solid orange;
+	border-radius: 100%;
+	font-size: 1.2em;
+	text-align: center;
+	padding: 0px;
+}
+
+.dest-score-show  p {
+	margin: 10px 10px;
+	color: #202020;
+	padding: 0px;
+}
+
+.dist-guide-form-submit {
+	position: fixed;
+	right: 50%;
+	bottom: 60px;
+	margin: 5px auto;
+	margin-right: -100px;
+	text-align: middle;
+	width: 200px;
+	height: 40px;
+	text-align: center;
+
+}
+
+.dist-guide-submit-bottom {
+	font-family: Helvetica;
+	width: 45px;
+	height: 45px;
+	background: #FF9400;
+	border-radius: 100%;
+	color: white;
+	border: 3px solid white;
 }

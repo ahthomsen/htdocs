@@ -53,9 +53,14 @@
 		$dest3 = $destinations[3]['DESTID'];
 		$dest4 = $destinations[4]['DESTID'];
 		$dest5 = $destinations[5]['DESTID'];
+		$dest6 = $destinations[6]['DESTID'];
+		$dest7 = $destinations[7]['DESTID'];
+		$dest8 = $destinations[8]['DESTID'];
+		$dest9 = $destinations[9]['DESTID'];
+		$dest10 = $destinations[10]['DESTID'];
 
 		
-		header("Location: topdestinations.php?dest1=".$dest1."&dest2=".$dest2."&dest3=".$dest3."&dest4=".$dest4."&dest5=".$dest5);
+		header("Location: topdestinations.php?dest1=".$dest1."&dest2=".$dest2."&dest3=".$dest3."&dest4=".$dest4."&dest5=".$dest5."&dest6=".$dest6."&dest7=".$dest7."&dest8=".$dest8."&dest9=".$dest9."&dest10=".$dest10);
 
 }
 else {

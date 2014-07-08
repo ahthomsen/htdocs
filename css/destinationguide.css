@@ -2,16 +2,12 @@
 
 /* Center area */
 
-.front-box {
-
-}
 
 .front-box {
 	margin: 5px auto;
 	text-align: left;
 	position: relative;
 	width: 95%;
-	height: 75px;
 	border: 5px solid white;
 	border-radius: 10px;
 	filter: none;
@@ -116,7 +112,7 @@
 	.front-box {
 	margin: 0 auto;
 	width: 48%;
-	height: 120px;
+	
 	margin-bottom: 20px;
 	}
 	
